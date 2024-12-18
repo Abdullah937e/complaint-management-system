@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Menu -->
+    <div id="mainMenu">
+        <h1>Complaint Management System</h1>
+        <button onclick="showCitizenPortal()">Citizen Portal</button>
+        <button onclick="showAdminPortal()">Admin Portal</button>
+    </div>
+
+    <!-- Citizen Portal -->
+    <div id="citizenPortal" class="portal">
+        <h2>Citizen Portal</h2>
+        <button onclick="registerComplaint()">Register Complaint</button>
+        <button onclick="viewComplaints()">View Your Complaints</button>
+        <button onclick="viewCategories()">View Complaint Categories</button>
+        <button onclick="backToMainMenu()">Back to Main Menu</button>
+    </div>
+
+    <!-- Admin Portal -->
+    <div id="adminPortal" class="portal">
+        <h2>Admin Portal</h2>
+        <button onclick="viewAllComplaints()">View All Complaints</button>
+        <button onclick="solveComplaint()">Solve Complaint</button>
+        <button onclick="backToMainMenu()">Back to Main Menu</button>
+    </div>
+
+    <!-- Complaint Registration Form -->
+    <div id="complaintForm" class="portal">
+        <h2>Register Complaint</h2>
+        <form id="complaintFormFields">
+            <label>First Name:</label><input type="text" id="firstName"><br>
+            <label>Last Name:</label><input type="text" id="lastName"><br>
+            <label>CNIC:</label><input type="text" id="cnic"><br>
+            <label>Phone Number:</label><input type="text" id="phone"><br>
+            <label>Address:</label><textarea id="address"></textarea><br>
+            <label>Gender:</label><input type="text" id="gender"><br>
+            <label>Problem Category:</label><input type="text" id="category"><br>
+            <label>Description:</label><textarea id="description"></textarea><br>
+            <button type="button" onclick="submitComplaint()">Submit Complaint</button>
+        </form>
+        <button onclick="backToCitizenPortal()">Back to Citizen Portal</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
